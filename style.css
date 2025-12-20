@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+
+}
+
+.bloco {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(191, 0, 0, 0.112); /* Sombra suave */
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+input, select, textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    transition: border-color 0.3s;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.linha-material {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #f9f9f9; /* Fundo cinza muito claro */
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.qtd-mat, .qtd-unica {
+    width: 60px !important;
+    text-align: center;
+    font-weight: bold;
+    background-color: #efe9e9; /* Fundo diferente para o contador */
+}
+
+.modelo-mat {
+    flex: 1;
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.linha label {
+    font-weight: normal;
+}
+
+.linha > label {
+    width: auto;
+}
+
+.bloco-cidade {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.bloco-encerramento {
+    border: 1px dashed #999;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #984824bf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #92431e; 
+}
+
+button:active {
+    background-color: #77371a; /* Um tom mais escuro quando pressionado */
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+.btn-copiar {
+    background-color: #28a745;
+}
+.btn-copiar:hover {
+    background-color: #218838;
+}
+
+.btn-copiar:active {
+    background-color: #1e7e34; /* Um tom mais escuro quando pressionado */
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+.linha button {
+    flex: 1;
+}
