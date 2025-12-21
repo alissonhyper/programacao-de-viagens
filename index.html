@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- =========================================
+         METADADOS E CONFIGURAÇÕES
+    ========================================== -->
+    <meta charset="UTF-8">
+    <title>Programação de Viagem</title>
+
+    <!-- ARQUIVO DE ESTILO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     TÍTULO PRINCIPAL
+========================================== -->
+<h1>Programação de Viagem</h1>
+
+<!-- =========================================
+     BLOCO: DATA E HORÁRIO
+========================================== -->
+<div class="bloco">
+    <label>Data:</label>
+    <input type="date" id="data" oninput="salvarDados()">
+
+    <label>Horário de início:</label>
+    <input type="time" id="inicio" min="05:00" max="13:30" step="300" oninput="salvarDados()">
+
+<!-- =========================================
+     BLOCO: EQUIPE
+========================================== -->
+<div class="bloco">
+    <div class="linha">
+        <div>
+            <label>Técnico:</label>
+            <select id="tecnico" onchange="salvarDados()">
+                <option value=""></option>
+                <option>Robert</option>
+                <option>Wallace</option>
+                <option>Paulo Henrique</option>
+                <option>Paulo Sergio</option>
+                <option>Valdemir</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Auxiliar:</label>
+            <select id="auxiliar" onchange="salvarDados()">
+                <option value=""></option>
+                <option>Kazury</option>
+                <option>Túlio</option>
+                <option>Júlio</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================
+     BLOCO: SERVIÇOS
+========================================== -->
+<div class="bloco">
+    <h2>Serviços agendados:</h2>
+
+    <label><input type="checkbox" class="servico" value="Instalações" onchange="salvarDados()"> Instalações</label>
+    <label><input type="checkbox" class="servico" value="Atendimentos" onchange="salvarDados()"> Atendimentos</label>
+    <label><input type="checkbox" class="servico" value="Entrega de boletos" onchange="salvarDados()"> Entrega de boletos</label>
+    <label><input type="checkbox" class="servico" value="Infraestrutura" onchange="salvarDados()"> Infraestrutura</label>
+</div>
+
+<!-- =========================================
+     BLOCO: MATERIAIS
+========================================== -->
+<div class="bloco">
+    <h2>Materiais Levados</h2>
+
+    <p style="font-size:0.9em;color:#666;text-align:center;margin-bottom:15px;">
+        Selecione a quantidade e o modelo. Deixe 0 para não incluir.
+    </p>
+
+    <!-- ONUs -->
+    <label>ONUs:</label>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ONU FIBERHOME">ONU FIBERHOME</option>
+            <option value="ONU FIBERSMART">ONU FIBERSMART</option>
+            <option value="ONU TP-LINK">ONU TP-LINK</option>
+            <option value="ONU CIANET">ONU CIANET</option>
+            <option value="ONU FAST-WI">ONU FAST-WI</option>
+            <option value="ONU C-DATA">ONU C-DATA</option>
+        </select>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ONU FIBERSMART">ONU FIBERSMART</option>
+            <option value="ONU FIBERHOME">ONU FIBERHOME</option>
+            <option value="ONU TP-LINK">ONU TP-LINK</option>
+            <option value="ONU CIANET">ONU CIANET</option>
+            <option value="ONU FAST-WI">ONU FAST-WI</option>
+            <option value="ONU C-DATA">ONU C-DATA</option>
+        </select>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ONU TP-LINK">ONU TP-LINK</option>
+            <option value="ONU FIBERHOME">ONU FIBERHOME</option>
+            <option value="ONU FIBERSMART">ONU FIBERSMART</option>
+            <option value="ONU CIANET">ONU CIANET</option>
+            <option value="ONU FAST-WI">ONU FAST-WI</option>
+            <option value="ONU C-DATA">ONU C-DATA</option>
+        </select>
+    </div>
+
+    <!-- ONTs -->
+    <label style="margin-top:10px;">ONTs:</label>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ONT FIBERHOME AC1200">ONT FIBERHOME AC1200</option>
+            <option value="ONT FIBERHOME AX3000">ONT FIBERHOME AX3000</option>
+        </select>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ONT FIBERHOME AX3000">ONT FIBERHOME AX3000</option>
+            <option value="ONT FIBERHOME AC1200">ONT FIBERHOME AC1200</option>
+        </select>
+    </div>
+    <!-- ROTEADORES -->
+    <label style="margin-top:10px;">Roteadores:</label>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ROTEADOR HUAWEI AX3S">ROTEADOR HUAWEI AX3S</option>
+            <option value="ROTEADOR INTELBRAS W6-1500">ROTEADOR INTELBRAS W6-1500</option>
+            <option value="ROTEADOR FIBERHOME 1500AX">ROTEADOR FIBERHOME 1500AX</option>
+            <option value="ROTEADOR GREATEK 1500AX">ROTEADOR GREATEK 1500AX</option>
+            <option value="ROTEADOR GREATEK 1200AC">ROTEADOR GREATEK 1200AC</option>
+        </select>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" class="qtd-mat" min="0" placeholder="0" oninput="salvarDados()">
+        <select class="modelo-mat" onchange="salvarDados()">
+            <option value="ROTEADOR INTELBRAS W6-1500">ROTEADOR INTELBRAS W6-1500</option>
+            <option value="ROTEADOR HUAWEI AX3S">ROTEADOR HUAWEI AX3S</option>
+            <option value="ROTEADOR FIBERHOME 1500AX">ROTEADOR FIBERHOME 1500AX</option>
+            <option value="ROTEADOR GREATEK 1500AX">ROTEADOR GREATEK 1500AX</option>
+            <option value="ROTEADOR GREATEK 1200AC">ROTEADOR GREATEK 1200AC</option>
+        </select>
+    </div>
+
+    <!-- CONECTORES -->
+    <label style="margin-top:10px;">Conectores e Acessórios:</label>
+
+    <div class="linha-material">
+        <input type="number" id="qtd-con-apc" class="qtd-unica" min="0" placeholder="0" oninput="salvarDados()">
+        <span>CONECTOR APC</span>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" id="qtd-con-upc" class="qtd-unica" min="0" placeholder="0" oninput="salvarDados()">
+        <span>CONECTOR UPC</span>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" id="qtd-nota" class="qtd-unica" min="0" placeholder="0" oninput="salvarDados()">
+        <span>NOTA DE ABASTECIMENTO</span>
+    </div>
+
+    <div class="linha-material">
+        <input type="number" id="qtd-chave" class="qtd-unica" min="0" placeholder="0" oninput="salvarDados()">
+        <span>CHAVE DA LOJA</span>
+    </div>
+
+    <!-- ALMOÇO -->
+    <label style="margin-top:10px;">Almoço:</label>
+    <select id="opt-almoco" onchange="salvarDados()">
+        <option value="">Sem dinheiro de almoço</option>
+        <option value="R$ 25,00 PARA O ALMOÇO">R$ 25,00 PARA O ALMOÇO</option>
+        <option value="R$ 50,00 PARA O ALMOÇO">R$ 50,00 PARA O ALMOÇO</option>
+        <option value="R$ 75,00 PARA O ALMOÇO">R$ 75,00 PARA O ALMOÇO</option>
+        <option value="R$ 100,00 PARA O ALMOÇO">R$ 100,00 PARA O ALMOÇO</option>
+    </select>
+</div>
+
+<!-- =========================================
+     BLOCO: CIDADES
+========================================== -->
+<div class="bloco">
+    <h2>Cidades</h2>
+
+    <!-- CIDADE 1 -->
+    <label><input type="checkbox" class="cidade" onchange="atualizarCidades(); salvarDados()"> Usar Cidade 1</label>
+    <div class="bloco-cidade">
+        <label>Nome da cidade:</label>
+        <input type="text" class="nome-cidade" oninput="salvarDados()">
+        <div class="linha">
+            <div style="flex:1">
+                <label>Clientes:</label>
+                <textarea class="clientes" rows="6" oninput="salvarDados()"></textarea>
+            </div>
+            <div style="flex:1">
+                <label>Status:</label>
+                <textarea class="status" rows="6" oninput="salvarDados()"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- CIDADE 2 -->
+    <label>
+    <input type="checkbox" class="cidade" onchange="atualizarCidades(); salvarDados()">
+    Usar Cidade 2
+    </label>
+    <div class="bloco-cidade" style="display: block;">
+    <label>Nome da cidade:</label>
+    <input type="text" class="nome-cidade" oninput="salvarDados()">
+
+    <div class="linha">
+        <div style="flex:1">
+            <label>Clientes:</label>
+            <textarea class="clientes" rows="6" oninput="salvarDados()"></textarea>
+        </div>
+
+        <div style="flex:1">
+            <label>Status:</label>
+            <textarea class="status" rows="6" oninput="salvarDados()"></textarea>
+        </div>
+    </div>
+    </div>
+
+    <!-- CIDADE 3 -->
+    <label>
+    <input type="checkbox" class="cidade" onchange="atualizarCidades(); salvarDados()">
+    Usar Cidade 3
+    </label>
+    <div class="bloco-cidade" style="display: block;">
+    <label>Nome da cidade:</label>
+    <input type="text" class="nome-cidade" oninput="salvarDados()">
+
+    <div class="linha">
+        <div style="flex:1">
+            <label>Clientes:</label>
+            <textarea class="clientes" rows="6" oninput="salvarDados()"></textarea>
+        </div>
+
+        <div style="flex:1">
+            <label>Status:</label>
+            <textarea class="status" rows="6" oninput="salvarDados()"></textarea>
+        </div>
+    </div>
+    </div>
+
+    <!-- CIDADE 4 -->
+    <label>
+    <input type="checkbox" class="cidade" onchange="atualizarCidades(); salvarDados()">
+    Usar Cidade 4
+    </label>
+    <div class="bloco-cidade" style="display: block;">
+    <label>Nome da cidade:</label>
+    <input type="text" class="nome-cidade" oninput="salvarDados()">
+
+    <div class="linha">
+        <div style="flex:1">
+            <label>Clientes:</label>
+            <textarea class="clientes" rows="6" oninput="salvarDados()"></textarea>
+        </div>
+
+        <div style="flex:1">
+            <label>Status:</label>
+            <textarea class="status" rows="6" oninput="salvarDados()"></textarea>
+        </div>
+    </div>
+    </div>
+
+<!-- =========================================
+     GERAR PROGRAMAÇÃO
+========================================== -->
+<div class="bloco">
+    <div class="linha">
+        <button type="button" onclick="gerarTexto()">GERAR PROGRAMAÇÃO</button>
+        <button type="button" class="btn-copiar" onclick="copiarTexto('resultado')">📋 COPIAR</button>
+    </div>
+    <textarea id="resultado" rows="20" readonly></textarea>
+</div>
+
+<!-- =========================================
+     ENCERRAMENTO
+========================================== -->
+<div class="bloco">
+    <h2>Encerramento da Viagem</h2>
+
+    <button type="button" onclick="iniciarEncerramento()">INICIAR ENCERRAMENTO</button>
+
+    <div id="lista-encerramento" style="display:none;margin-top:15px;"></div>
+
+    <div class="linha">
+        <button type="button" onclick="gerarEncerramento()">GERAR ENCERRAMENTO</button>
+        <button type="button" class="btn-copiar" onclick="copiarTexto('resultado-encerramento')">📋 COPIAR</button>
+    </div>
+
+    <textarea id="resultado-encerramento" rows="20" readonly></textarea>
+</div>
+
+<!-- =========================================
+     JAVASCRIPT (OBRIGATÓRIO)
+========================================== -->
+<script src="programacao_viagem.js"></script>
+
+</body>
+</html>
