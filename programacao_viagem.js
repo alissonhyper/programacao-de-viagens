@@ -353,10 +353,6 @@ function gerarEncerramento() {
 
         // === CABEÇALHO DO FECHAMENTO (espelhado da programação) ===
     const data = document.getElementById("data").value;
-    const encerramento = document.getElementById("horario-encerramento") 
-        ? document.getElementById("horario-encerramento").value
-        : "";
-
     const tecnico = document.getElementById("tecnico").value;
     const auxiliar = document.getElementById("auxiliar").value;
 
@@ -375,7 +371,7 @@ function gerarEncerramento() {
     t += `🔧 EQUIPE: ${tecnico} e ${auxiliar}\n`;
     t += `📍 DESIGNAÇÃO: ${listaComE(cidades)} – ${listaComE(servicos)}\n`;
     const inicio = document.getElementById("inicio").value;
-    t += `🕗 INÍCIO: ${inicio}\n\n`;
+    t += `🕗 INÍCIO: ${inicio}\n\n`;   
 
     // ============================================================
 
@@ -414,6 +410,47 @@ function gerarEncerramento() {
         t += "\n";
     });
 
+
+
     t += "----------------------------------------------------------------------------\n";
     document.getElementById("resultado-encerramento").value = t;
+}
+
+/* =====================================================
+   IMPRIMIR PROGRAMAÇÃO
+===================================================== */
+function imprimirProgramacao() {
+    const texto = document.getElementById("resultado").value;
+
+    if (!texto.trim()) {
+        alert("Gere a programação antes de imprimir.");
+        return;
+    }
+
+    const janela = window.open("", "", "width=800,height=600");
+
+    janela.document.write(`
+        <html>
+            <head>
+                <title>Programação da Viagem</title>
+                <style>
+                    body {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 15px;
+                        padding: 25px;
+                        padding-left: 05px;
+                        line-height: 1.4;
+                    }
+                </style>
+            </head>
+            <body>
+                ${texto.replace(/\n/g, "<br>")}
+            </body>
+        </html>
+    `);
+
+    janela.document.close();
+    janela.focus();
+    janela.print();
+    janela.close();
 }
