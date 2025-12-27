@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f1ee;
+    color: #2b2b2b;
+    padding: 20px;
+}
+
+h1 {
+    color: #984824;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #000000d6;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.bloco {
+    background: #ffffff;
+    border-left: 4px solid #984924cc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Sombra suave */
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #252525;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+input, select, textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    transition: border-color 0.3s;
+    padding: 8px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #8c8c8c; /* Cor da borda ao focar */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.linha-material {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #f9f9f9; /* Fundo cinza muito claro */
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.qtd-mat, .qtd-unica {
+    width: 60px !important;
+    text-align: center;
+    font-weight: bold;
+    background-color: #efe9e9; /* Fundo diferente para o contador */
+}
+
+.modelo-mat {
+    flex: 1;
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.linha label {
+    font-weight: normal;
+}
+
+.linha > label {
+    width: auto;
+}
+
+.bloco-cidade {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.bloco-encerramento {
+    border: 1px dashed #999;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #984824;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #8a3f1f; /* Tom ligeiramente mais escuro ao passar o mouse */
+}
+
+button:active {
+    background-color: #77371a; /* Um tom mais escuro quando pressionado */
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+.btn-copiar {
+    background-color: #28a745;
+}
+
+.btn-copiar:hover {
+    background-color: #218838;
+}
+
+.btn-copiar:active {
+    background-color: #1e7e34; /* Um tom mais escuro quando pressionado */
+    transform: translateY(1px);
+}
+
+.linha button {
+    flex: 1;
+}
+
+::placeholder {
+    color: #9a9a9a; /* Cor do placeholder (conteúdo do campo) */
+}
+
+/* ================================
+   ACCORDION - SERVIÇOS
+================================ */
+
+.accordion {
+    border: 1px solid #98492466;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.accordion-header {
+    width: 100%;
+    background: #f4f1ee;
+    border: none;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #984824;
+}
+
+.accordion-header:hover {
+    background: #ece6e1;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #984824;
+    transition: transform 0.3s ease;
+}
+
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 14px;
+    background: #ffffff;
+}
+
+.accordion-content label {
+    display: block;
+    margin: 10px 0;
+    font-weight: 600;
+    color: #252525;
+}
+
+.accordion-content input[type="checkbox"] {
+    accent-color: #984824;
+    margin-right: 8px;
+}
+
+.accordion.open .accordion-content {
+    max-height: 300px;
+    padding-bottom: 10px;
+}
+
+.accordion.open .accordion-icon {
+    transform: rotate(45deg);
+}
