@@ -147,7 +147,6 @@ button:active {
     color: #9a9a9a; /* Cor do placeholder (conteúdo do campo) */
 }
 
-<<<<<<< HEAD
 /* ================================
    ACCORDION - SERVIÇOS
 ================================ */
@@ -213,5 +212,3 @@ button:active {
 .accordion.open .accordion-icon {
     transform: rotate(45deg);
 }
-=======
->>>>>>> 037b5d2c0c1de8a080fb99a18544f8eeb000432c

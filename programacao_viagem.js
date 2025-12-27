@@ -454,7 +454,6 @@ function imprimirProgramacao() {
     janela.print();
     janela.close();
 }
-<<<<<<< HEAD
 
 // ================================
 // ACCORDION - SERVIÇOS
@@ -489,5 +488,4 @@ document.addEventListener("DOMContentLoaded", function () {
         checkbox.addEventListener('change', atualizarQuantidadeServicos);
     });
 });
-=======
->>>>>>> 037b5d2c0c1de8a080fb99a18544f8eeb000432c
+
